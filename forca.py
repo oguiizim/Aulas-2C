@@ -1,24 +1,25 @@
-# palavra1 = ["porco"]
-# teste = len(palavra1)
-# teste2 = teste
+word1 = "porco"
+word2 = "pedra"
+word3 = "biblioteca"
 
-# for i in range(0,teste2):
-#     letter = palavra1[i]
-#     print(letter)
 
-palavra = "porco"
 palavraVazia = []
-
+errors = 0 
+rights = 0
 while True:
     verify = int(input("Digite o num:"))
     if(verify == 1):
-        letter = str(input("Digite uma letra: "))
-        palavraVazia.append(letter)
-
-        print(palavraVazia)
-        if(letter in palavra):
-            print("try")
-
-        print(len(letter in palavra))
+        print("\n1 - Digitar uma letra\n2 - Chutar uma palavra")
+        verify2 = int(input("Digite sua opção: "))
+        if(verify == 1):
+            letter = str(input("Digite uma letra: "))
+            palavraVazia.append(letter)
+            # print(palavraVazia)
+            if(letter in word1):
+                rights += 1
+                print("Você tem {} acertos".format(rights))
+            else:
+                errors += 1
+                print("Você tem {} erros até o momento!".format(errors))
     else:
         break
